@@ -6,32 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>가변 레이아웃</title>
     <style>
+      * {
+        /* 패딩이 늘어나도 박스 크기 커지지 않도록 */
+        box-sizing: border-box;
+      }
       .container {
-        width: 960px;
+        /* 컨테이너는 body의 자식으로 body의 width 값의 90% */
+        /* width: 960px; */
+        width: 90%;
         margin: 0 auto;
         text-align: center;
         background-color: rgb(181, 181, 181);
       }
       .header {
-        width: 960px;
+        /* 컨테이너의 자식으로 컨테이너 width 값의 100% */
+        /* width: 960px; */
+        width: 100%;
         height: 100px;
         background-color: tomato;
       }
       .main {
         float: left;
-        width: 640px;
+        /* 컨테이너의 자식으로 컨테이너 width 값의 70% */
+        /* width: 640px; */
+        width: 70%;
         height: 300px;
         background-color: orange;
       }
       .aside {
         float: right;
-        width: 320px;
+        /* 컨테이너의 자식으로 컨테이너 width 값의 30% */
+        /* width: 320px; */
+        width: 30%;
         height: 300px;
         background-color: purple;
+        /*margin, padding 등의 여백은 부모인 컨테이너의 width 기준으로 계산*/
+        padding: 10%;
       }
       .footer {
         clear: both;
-        width: 960px;
+        /* 컨테이너의 자식으로 컨테이너 width 값의 100% */
+        /* width: 960px; */
+        width: 100%;
         height: 100px;
         background-color: violet;
       }
