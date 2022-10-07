@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>반응형 웹 연습</title>
-    <link href="css/reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- 시맨틱 태그 header로 헤더 부분을 묶음 -->
+    <header class="header">
+      <div class="header__wrapper">
+        <!-- 햄버거 메뉴 / 로고 -->
+        <div class="header__start">
+          <button class="header__menu">&#9776;</button>
+          <img
+            class="header__logo"
+            src="./imgs/logo.png"
+            alt="logo"
+            width="30px"
+            height="30px"
+          />
+          <span class="header__title">YouTwitter</span>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="header__center">
+          <form class="header__searchForm" onsubmit="return false;">
+            <input
+              class="header__input--text"
+              type="text"
+              placeholder="동영상을 검색하세요."
+            /><button class="header__input--btn">검색</button>
+          </form>
+        </div>
+
+        <!-- 프로필 -->
+        <div class="header__end">
+          <button class="header__search">&#128269;</button>
+          <div class="header__profile"></div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
-<br />
