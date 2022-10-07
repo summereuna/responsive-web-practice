@@ -1,129 +1,74 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+.thumbs__wrapper {
+  display: flex;
+  flex-wrap: wrap; /*1차원 행렬을 여러 행으로*/
+  justify-content: space-between;
+  margin: 60px 0 0 160px; /*헤더와 네비 공간 띄우기*/
+  padding: 20px 10px 0 10px;
+}
+.thumbs__item {
+  width: 25%; /*한 줄에 4개씩 보이게*/
+  margin: 0 0 15px 0;
+  padding: 0 10px;
+}
+.thumbs__thumbnail {
+  max-width: 100%; /*자기가 속한 영역에서 벗어나지 몺하게 최대 너비 100%*/
+  height: auto;
+  margin: 0 0 10px 0;
+}
+.thumbs__info {
+  display: flex;
+}
+.thumbs__profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgb(158, 221, 255);
+  background-image: url(../imgs/profile.png); /*이미지 불러오기*/
+  background-size: 100% 100%;
+}
+.thumbs__text {
+  width: calc(100% - 36px); /*전체 너비에서 프로필 사진 너비 만큼 뺀 값*/
+  padding-left: 10px;
+}
+.thumbs__text--title {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+.thumbs__text--owner {
+  padding: 3px 0;
+  font-size: 0.9rem;
+  color: #2d2d2d;
+  margin-bottom: 0.2em;
+}
+.thumbs__text--anal {
+  font-size: 0.8rem;
+  color: #8d8d8d;
+}
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+@media screen and (max-width: 1000px) {
+  /*한 줄에 3개씩*/
+  .thumbs__item {
+    width: 33%;
+  }
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+
+@media screen and (max-width: 800px) {
+  /*한 줄에 2개씩*/
+  .thumbs__item {
+    width: 50%;
+  }
+  .thumbs__wrapper {
+    margin: 60px 0 0 70px; /*줄어든 네비 공간에 맞게 띄우기*/
+  }
 }
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+@media screen and (max-width: 400px) {
+  /*한 줄에 1개씩*/
+  .thumbs__item {
+    width: 100%;
+  }
+  .thumbs__wrapper {
+    margin: 60px 0 0 0; /*네비 부분 삭제*/
+    padding: 20px 0 0 0; /*패딩 탑만 두고 삭제*/
+  }
 }
