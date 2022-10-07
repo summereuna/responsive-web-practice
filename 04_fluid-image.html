@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가변 이미지(Fluid Image</title>
+    <style>
+      .profile {
+        /* 기본적으로 너비 부모요소 가져오지만 */
+        width: 100%;
+        /* 이 보다는 더 커지지 마라 */
+        max-width: 600px;
+        /* width만 지정할 경우 원본 비율에 맞게 height은 자동으로 지정해줌 */
+        background-color: aquamarine;
+        display: none;
+      }
+
+      .div {
+        width: 50%;
+      }
+      .div__profile {
+        /* div가 body의 50%이기 때문에 div안의 img의 최대 너비를 100%으로 주면 div의 크기에 따라 가변성 있게 된다.*/
+        max-width: 100%;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img class="profile" src="./eue.png" alt="profile" />
+    <div class="div">
+      <img class="div__profile" src="./eue.png" alt="profile" />
+    </div>
+  </body>
+</html>
